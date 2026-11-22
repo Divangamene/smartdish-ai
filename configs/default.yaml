@@ -1,0 +1,25 @@
+# Configuração base de treino da CNN
+seed: 42
+
+data:
+  train_dir: data/processed/train
+  val_dir: data/processed/val
+  test_dir: data/processed/test
+  image_size: 224
+  batch_size: 32
+  num_workers: 2
+
+model:
+  name: simple_cnn        # simple_cnn | resnet18 | efficientnet_b0 (via timm)
+  pretrained: true
+  num_classes: 10
+
+training:
+  epochs: 20
+  lr: 0.001
+  weight_decay: 0.0001
+  device: auto            # auto | cpu | cuda
+
+paths:
+  checkpoints: models/checkpoints
+  logs: outputs/logs

@@ -1,0 +1,34 @@
+# Ambiente
+.venv/
+__pycache__/
+*.py[cod]
+.env
+.ipynb_checkpoints/
+.pytest_cache/
+.ruff_cache/
+
+# Dados (grandes demais para o git) - mantém só a estrutura
+data/**
+!data/**/
+!data/**/.gitkeep
+
+# Modelos treinados e resultados
+models/checkpoints/*
+!models/checkpoints/.gitkeep
+*.pt
+*.pth
+*.ckpt
+*.h5
+*.keras
+*.onnx
+outputs/logs/*
+!outputs/logs/.gitkeep
+outputs/predictions/*
+!outputs/predictions/.gitkeep
+lightning_logs/
+
+# IDE / SO
+.vscode/
+.idea/
+Thumbs.db
+.DS_Store
